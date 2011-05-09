@@ -1,0 +1,40 @@
+﻿@model treeTaggerMVC3.Models.treeObservations
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>treeObservations</legend>
+
+    <div class="display-label">species</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.species)
+    </div>
+
+    <div class="display-label">lat</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lat)
+    </div>
+
+    <div class="display-label">longitude</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.longitude)
+    </div>
+
+    <div class="display-label">radius</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.radius)
+    </div>
+
+    <div class="display-label">date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

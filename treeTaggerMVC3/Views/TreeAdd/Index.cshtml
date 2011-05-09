@@ -1,0 +1,57 @@
+﻿@model IEnumerable<treeTaggerMVC3.Models.treeObservations>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div id='mapDiv' class="map"></div>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            species
+        </th>
+        <th>
+            lat
+        </th>
+        <th>
+            longitude
+        </th>
+        <th>
+            radius
+        </th>
+        <th>
+            date
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.species)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.longitude)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.radius)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

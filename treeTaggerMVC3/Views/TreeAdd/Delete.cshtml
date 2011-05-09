@@ -1,0 +1,43 @@
+﻿@model treeTaggerMVC3.Models.treeObservations
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>treeObservations</legend>
+
+    <div class="display-label">species</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.species)
+    </div>
+
+    <div class="display-label">lat</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lat)
+    </div>
+
+    <div class="display-label">longitude</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.longitude)
+    </div>
+
+    <div class="display-label">radius</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.radius)
+    </div>
+
+    <div class="display-label">date</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.date)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
