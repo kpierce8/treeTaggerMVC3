@@ -4,6 +4,23 @@
     ViewBag.Title = "Index";
 }
 
+<script type="text/javascript">
+ this.rowFeedback = function(whichrow) {
+    this.sendPos(whichrow);
+    return this;
+}
+
+function sendPos(whichrow) {
+
+    createCookie("mylat", whichrow.childNodes[3].innerHTML);
+    createCookie("mylong", whichrow.childNodes[5].innerHTML);
+    //document.cookie = "mylat = " + whichrow.childNodes[3].innerHTML + "; path=/";
+    //document.cookie = "mylong = " + whichrow.childNodes[5].innerHTML + "; path=/";
+    GetMap(18, whichrow.childNodes[3].innerHTML, whichrow.childNodes[5].innerHTML);
+   
+}
+</script>
+
 <h2>Index</h2>
 <div id='mapDiv' class="map"></div>
 <p>
@@ -30,7 +47,7 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
+    <tr onclick= "rowFeedback(this);">
         <td>
             @Html.DisplayFor(modelItem => item.species)
         </td>
