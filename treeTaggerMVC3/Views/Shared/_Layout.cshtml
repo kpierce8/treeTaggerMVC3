@@ -14,18 +14,17 @@
        // document.cookie = "mylat = 45;path=/";
         // document.cookie = "mylong = -122.5;path=/";
         lat = 47.0;
-        long = -122.8;
+        longitude = -122.8;
     </script>
 
     
     <script type="text/javascript">
 
-        function GetMap(zLevel, lat, long) {
-//            lat = readCookie("mylat");
-//            long = readCookie("mylong");
+        function GetMap(zLevel, lat, longitude) {
+
             var map = new Microsoft.Maps.Map(document.getElementById("mapDiv"),
             { credentials: "Ar0aDgj4Y-As2wCE7_iNELR306VP_gqusZtyAipfRhCrJo2_KQn4kyLminHPZbj_",
-                center: new Microsoft.Maps.Location(lat, long),
+                center: new Microsoft.Maps.Location(lat, longitude),
                 mapTypeId: Microsoft.Maps.MapTypeId.aerial,
                 zoom: zLevel
             });
@@ -56,7 +55,7 @@
 
 </head>
 
-<body onload="GetMap(15, lat, long);">
+<body onload="GetMap(15, lat, longitude);">
     <ul>
     <li><a href="../Home/index">Home</a></li>
     <li><a href="../TreeAdd/Index">List Trees</a></li>
