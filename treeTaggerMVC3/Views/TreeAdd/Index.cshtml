@@ -12,11 +12,19 @@
 
 function sendPos(whichrow) {
 
-    createCookie("mylat", whichrow.childNodes[3].innerHTML);
-    createCookie("mylong", whichrow.childNodes[5].innerHTML);
-    //document.cookie = "mylat = " + whichrow.childNodes[3].innerHTML + "; path=/";
+
+    //var thelat = whichrow.getElementsByClassName(whichrow, "latitude");
+    var thelat = $('td.latitude', $(whichrow))[0].textContent;
+    var re = /_/g;
+    var test3 = thelat.replace(re, "");
+    var thelong = $('td.longitude', $(whichrow))[0].textContent;
+    var re = /_/g;
+    var test4 = thelong.replace(re, "");
+    createCookie("mylat", Number(test3));
+    createCookie("mylong", Number(test4));
+    //document.cookie = "mylat = " + Number(test3) + "; path=/";
     //document.cookie = "mylong = " + whichrow.childNodes[5].innerHTML + "; path=/";
-    GetMap(18, whichrow.childNodes[3].innerHTML, whichrow.childNodes[5].innerHTML);
+    GetMap(18, test3, test4);
    
 }
 </script>
@@ -51,10 +59,10 @@ function sendPos(whichrow) {
         <td>
             @Html.DisplayFor(modelItem => item.species)
         </td>
-        <td>
+        <td class="latitude">
             @Html.DisplayFor(modelItem => item.lat)
-        </td>
-        <td>
+        </td >
+        <td class="longitude">
             @Html.DisplayFor(modelItem => item.longitude)
         </td>
         <td>

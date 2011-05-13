@@ -2,7 +2,7 @@
     ViewBag.Title = "TreeTagger: Social Tree Mapping";
 }
 
-<div id="intro">
+<div id="intro" >
 <h2>TreeTagger</h2>
 <h3>Social Tree Mapping</h3>
 
@@ -13,6 +13,9 @@ treetagger was to provide a ready source of species level tree location data for
 to use as training locations for vegetation mapping through remote sensing data.
 </p>
 </div>
+
+<input id="txtQuery" type="text" value="Lacey"/>
+<input type="button" value="Geocode" onclick="ClickGeocode()"/>
 
 <input id='textBox' type="text" style="width:250px;"/>
 <div id='mapDiv' class="map"></div>
