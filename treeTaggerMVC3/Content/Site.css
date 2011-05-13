@@ -18,12 +18,25 @@ section {
 .map {
 position: absolute;
 top: 50px;
-left: 400px;
+left: 510px;
 width: 600px;
 height: 500px;
 border:#555555 2px solid;
 }
 
+.map2 {
+float: right;
+width: 500px;
+height: 500px;
+border:#555555 2px solid;
+}
+
+.mapForm
+{
+ float:left;  
+ width:500px; 
+
+}
 #intro
 {
     width:300px;
