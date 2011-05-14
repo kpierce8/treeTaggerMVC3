@@ -17,5 +17,10 @@ namespace treeTaggerMVC3.Controllers
             return View();
         }
 
+
+        public ActionResult About()
+        {
+            return View();
+        }
     }
 }

@@ -4,7 +4,7 @@
 */
 function createCookie(name, value) {
     var date = new Date();
-    date.setTime(date.getTime() + (2 *30 * 1000));
+    date.setTime(date.getTime() + (2 *3000 * 1000));
     var expires = "; expires=" + date.toGMTString();
 
     document.cookie = name + "=" + value + expires + "; path=/";
