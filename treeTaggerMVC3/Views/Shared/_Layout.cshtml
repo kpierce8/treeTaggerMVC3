@@ -78,12 +78,18 @@
 </head>
 
 <body onload="GetMap(15,lat,longitude);">
-    <ul>
-    <li><a href="/Home/index">Home</a></li>
-    <li><a href="/TreeAdd/Index">List Trees</a></li>
-    <li><a href="/TreeAdd/Create">Add Tree</a></li>
-    <li><a href="/Home/About">About</a></li>
-    </ul>
+    <div class="header">
+        <h2>
+            TreeTagger</h2>
+        <h3>
+            Social Tree Mapping</h3>
+        <ul>
+            <li><a href="/Home/index">Home</a></li>
+            <li><a href="/TreeAdd/Index">List Trees</a></li>
+            <li><a href="/TreeAdd/Create">Add Tree</a></li>
+            <li><a href="/Home/About">About</a></li>
+        </ul>
+    </div>
     @RenderBody()
 </body>
 

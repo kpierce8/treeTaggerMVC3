@@ -13,6 +13,12 @@ section {
     display: block;
 }
 
+#banner 
+{
+    background-color:Fuchsia;
+    font-size: 1.5em;
+}
+
 /* Styles for basic forms
 -----------------------------------------------------------*/
 .map {
@@ -39,7 +45,7 @@ border:#555555 2px solid;
 }
 #intro
 {
-    width:300px;
+    width:500px;
     background-color:Green;
 }
 
