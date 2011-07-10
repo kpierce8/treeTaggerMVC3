@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="treeTaggerMVC3Model.Store" Alias="Self" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="treeTaggerMVC3ModelStoreContainer">
+          <EntitySet Name="treeObservations" EntityType="treeTaggerMVC3Model.Store.treeObservations" store:Type="Tables" />
+        </EntityContainer>
+        <EntityType Name="treeObservations">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="species" Type="nvarchar" />
+          <Property Name="lat" Type="real" Nullable="false" />
+          <Property Name="longitude" Type="real" Nullable="false" />
+          <Property Name="radius" Type="real" Nullable="false" />
+          <Property Name="date" Type="datetime" Nullable="false" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="treeTaggerMVC3Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="treeTaggerMVC3Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="treeObservations" EntityType="treeTaggerMVC3Model.treeObservation" />
+        </EntityContainer>
+        <EntityType Name="treeObservation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="species" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="lat" Type="Single" Nullable="false" />
+          <Property Name="longitude" Type="Single" Nullable="false" />
+          <Property Name="radius" Type="Single" Nullable="false" />
+          <Property Name="date" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="treeTaggerMVC3ModelStoreContainer" CdmEntityContainer="treeTaggerMVC3Entities">
+          <EntitySetMapping Name="treeObservations">
+            <EntityTypeMapping TypeName="treeTaggerMVC3Model.treeObservation">
+              <MappingFragment StoreEntitySet="treeObservations">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="species" ColumnName="species" />
+                <ScalarProperty Name="lat" ColumnName="lat" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="radius" ColumnName="radius" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
