@@ -7,7 +7,7 @@ using System.Linq;
 using System.ServiceModel.Web;
 using System.Web;
 using treeTaggerMVC3.Models;
-using System.Data.Entity.Infrastructure;
+//using System.Data.Entity.Infrastructure;
 
 namespace treeTaggerMVC3
 {
