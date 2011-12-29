@@ -14,6 +14,9 @@ namespace treeTaggerMVC3.Controllers
     {
         private treeOBSEntities db = new treeOBSEntities();
 
+        public TreeAddController() {
+
+    }
         //
         // GET: /TreeAdd/
 
