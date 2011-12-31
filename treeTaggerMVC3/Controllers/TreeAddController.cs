@@ -27,6 +27,13 @@ namespace treeTaggerMVC3.Controllers
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet]
+        public JsonResult GetJsonList()
+        {
+            var model = db.treeOBS.ToList();
+            return Json(model, JsonRequestBehavior.AllowGet);
+        }
+
 
         public ViewResult Index()
         {
