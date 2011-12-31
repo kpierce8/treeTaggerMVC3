@@ -23,7 +23,7 @@ namespace treeTaggerMVC3.Controllers
         [HttpGet]
         public JsonResult GetJson()
         {
-            var model = db.treeOBS.ToList();
+            var model = db.treeOBS.First();
             return Json(model, JsonRequestBehavior.AllowGet);
         }
 
